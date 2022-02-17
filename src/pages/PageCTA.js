@@ -1,8 +1,8 @@
 import React from "react";
-import ProductCard from './../components/ProductCard.tsx';
+import ProductCard from './../components/ProductList.tsx';
 
 const PageCTA = () => {
-    return <ProductCard />;
+    return <ProductList />;
 };
 
 export default PageCTA;

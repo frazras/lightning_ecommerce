@@ -1,4 +1,5 @@
 import React, {FC, useEffect} from 'react';
+import ProductCard from './ProductCard';
 
 interface Product {
   img: string,
@@ -9,7 +10,7 @@ interface Product {
   inventory: number,
 }
 
-const App: FC = () => {
+const ProductList: FC = () => {
   const [products, setProducts] = React.useState([]);
   const [cart, setCart] = React.useState([]);
 
@@ -48,4 +49,4 @@ const App: FC = () => {
   );
 }
 
-export default App;
+export default ProductList;
