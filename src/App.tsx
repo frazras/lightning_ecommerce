@@ -5,18 +5,25 @@ import PageOne from "./pages/PageOne";
 import PageTwo from "./pages/PageTwo";
 import PageThree from "./pages/PageThree";
 import PageCTA from "./pages/PageCTA";
+import { Cart, CartContext } from './Context';
+import React from "react";
+
 
 function App() {
+    const [cart, setCart] = React.useState([] as Cart);
+    const addToCart = () => {}
     return (
-        <Layout>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/page-one" element={<PageOne />} />
-                <Route path="/page-two" element={<PageTwo />} />
-                <Route path="/page-three" element={<PageThree />} />
-                <Route path="/page-cta" element={<PageCTA />} />
-            </Routes>
-        </Layout>
+        <CartContext.Provider value={{ cart, setCart, addToCart}}>
+            <Layout>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/page-one" element={<PageOne />} />
+                    <Route path="/page-two" element={<PageTwo />} />
+                    <Route path="/page-three" element={<PageThree />} />
+                    <Route path="/page-cta" element={<PageCTA />} />
+                </Routes>
+            </Layout>
+        </CartContext.Provider>
     );
 }
 

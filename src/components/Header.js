@@ -6,6 +6,8 @@ import { AiOutlineClose } from "react-icons/ai";
 import classes from "./Header.module.scss";
 import { Link, useNavigate } from "react-router-dom";
 
+import {useCart} from '../Context'
+
 const Header = () => {
     const navigate = useNavigate();
     const [menuOpen, setMenuOpen] = useState(false);
@@ -13,7 +15,8 @@ const Header = () => {
         width: undefined,
         height: undefined,
     });
-
+    const { cart } = useCart();
+    console.log(cart);
     useEffect(() => {
         const handleResize = () => {
             setSize({
@@ -45,7 +48,7 @@ const Header = () => {
         <header className={classes.header}>
             <div className={classes.header__content}>
                 <Link to="/" className={classes.header__content__logo}>
-                    navbar
+                    LNPets
                 </Link>
                 <nav
                     className={`${classes.header__content__nav} ${
@@ -69,7 +72,7 @@ const Header = () => {
                             </Link>
                         </li>
                     </ul>
-                    <button onClick={ctaClickHandler}>CTA Page</button>
+                    <button onClick={ctaClickHandler}>Cart({cart.length})</button>
                 </nav>
                 <div className={classes.header__content__toggle}>
                     {!menuOpen ? (
