@@ -6,12 +6,28 @@ import PageTwo from "./pages/PageTwo";
 import PageThree from "./pages/PageThree";
 import PageCTA from "./pages/PageCTA";
 import { Cart, CartContext } from './Context';
-import React from "react";
+import React, { SetStateAction } from "react";
+import { Product } from "./components/ProductList";
 
 
 function App() {
     const [cart, setCart] = React.useState([] as Cart);
-    const addToCart = () => {}
+    const addToCart = (product:Product, cart:Cart) => {
+        const newcart = cart.slice();
+        let found = false;
+        for (let i = 0; i < newcart.length; i++) {
+            const li = newcart[i];
+            if(li[0] === product) {
+                li[1]++;
+                found = true;
+                break;
+            }
+        }
+        if(!found){
+            newcart.push([product,1])
+        }
+        setCart(newcart as SetStateAction<Cart>);
+    }
     return (
         <CartContext.Provider value={{ cart, setCart, addToCart}}>
             <Layout>

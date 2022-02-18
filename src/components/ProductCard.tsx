@@ -1,24 +1,28 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classes from "./ProductCard.module.scss";
+import {useCart} from '../Context'
+import { Product } from './ProductList';
 
 const ProductCard = (props: any) => {
+   const { cart, setCart, addToCart } = useCart();
+   function add(product:Product) {
+    addToCart(product, cart)
+    console.log('You added '+ product.name + ' to the cart.');
+  }
   return (
     <div className={classes.card}>
-        <img src={props.img} alt="product" />
-        <h2>{props.name}</h2>
-        <p className={classes.price}>${props.price}</p>
+        <img src={props.product.img + "?x=" + props.product.name} alt="product" />
+        <h2>{props.product.name}</h2>
+        <p className={classes.price}>${props.product.price}</p>
         <p>Take this pet home with you today.</p>
-        <p><button>Add to Cart</button></p>
+        <p><button onClick={(e) => add(props.product)}>Add to Cart</button></p>
     </div>
   )
 }
 
 ProductCard.propTypes = {
-  name:PropTypes.string,
-  price:PropTypes.string,
-  img:PropTypes.string,
-  addToCart:PropTypes.func
+  product:PropTypes.any
 }
 
 export default ProductCard

@@ -40,9 +40,9 @@ export const ProductList: FC = () => {
     <div className="App">
       <div className={classes.columns}>
         {
-          products && products.length>0 && products.map((item:Product)=>
-          <div className={classes.column} key={item.sku}> 
-            <ProductCard  name={item.name} price={item.price} img={item.img + "?x=" + item.name}/>
+          products && products.length>0 && products.map((product:Product)=>
+          <div className={classes.column} key={product.sku}> 
+            <ProductCard  product={product} />
             </div>)
         }
       </div>
