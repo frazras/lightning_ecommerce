@@ -1,5 +1,6 @@
 import React, {FC, useEffect} from 'react';
 import ProductCard from './ProductCard';
+import classes from "./ProductList.module.scss";
 
 interface Product {
   img: string,
@@ -24,11 +25,9 @@ const ProductList: FC = () => {
     }
     )
       .then(function(response){
-        console.log(response)
         return response.json();
       })
       .then(function(myJson) {
-        console.log(myJson);
         setProducts(myJson)
       });
   }
@@ -39,13 +38,16 @@ const ProductList: FC = () => {
 
 
   return (
-    <>
     <div className="App">
-     {
-       products && products.length>0 && products.map((item:Product)=><p>{item.name}</p>)
-     }
+      <div className={classes.columns}>
+        {
+          products && products.length>0 && products.map((item:Product)=>
+          <div className={classes.column} key={item.sku}> 
+            <ProductCard  name={item.name} price={item.price} img={item.img + "?x=" + item.name} addToCart={setCart}/>
+            </div>)
+        }
+      </div>
     </div>
-    </>
   );
 }
 

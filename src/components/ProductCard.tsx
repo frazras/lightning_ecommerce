@@ -5,15 +5,20 @@ import classes from "./ProductCard.module.scss";
 const ProductCard = (props: any) => {
   return (
     <div className={classes.card}>
-        <img src="https://www.w3schools.com/w3images/jeans3.jpg" alt="product" />
-        <h2>Product 12</h2>
-        <p className={classes.price}>$19.99</p>
-        <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+        <img src={props.img} alt="product" />
+        <h2>{props.name}</h2>
+        <p className={classes.price}>${props.price}</p>
+        <p>Take this pet home with you today.</p>
         <p><button>Add to Cart</button></p>
     </div>
   )
 }
 
-ProductCard.propTypes = {}
+ProductCard.propTypes = {
+  name:PropTypes.string,
+  price:PropTypes.string,
+  img:PropTypes.string,
+  addToCart:PropTypes.func
+}
 
 export default ProductCard

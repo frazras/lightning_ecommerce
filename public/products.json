@@ -1,49 +1,49 @@
 [
     {
-        "img": "",
-        "name": "product1",
+        "img": "https://placeimg.com/640/480/animals",
+        "name": "Pet of all pets",
         "price": "600",
         "sku": "34ef7g78",
         "category": "Electronics",
         "inventory": 56
     },
     {
-        "img": "",
-        "name": "product2",
+        "img": "https://placeimg.com/640/480/animals",
+        "name": "For Animal Lovers",
         "price": "600",
-        "sku": "34ef7g78",
+        "sku": "5trktergr",
         "category": "Electronics",
         "inventory": 56
     },
    {
-        "img": "",
-        "name": "product3",
-        "price": "600",
-        "sku": "34ef7g78",
+        "img": "https://placeimg.com/640/480/animals",
+        "name": "Best Friend",
+        "price": "650",
+        "sku": "44ttrty4564he",
         "category": "Electronics",
         "inventory": 56
     },
     {
-        "img": "",
-        "name": "product4",
+        "img": "https://placeimg.com/640/480/animals",
+        "name": "Fanimal",
         "price": "600",
-        "sku": "34ef7g78",
+        "sku": "6jrth45",
         "category": "Electronics",
         "inventory": 56
     },
     {
-        "img": "",
-        "name": "product5",
+        "img": "https://placeimg.com/640/480/animals",
+        "name": "Feed Me",
         "price": "600",
-        "sku": "34ef7g78",
+        "sku": "gh35yh4h",
         "category": "Electronics",
         "inventory": 56
     },
     {
-        "img": "",
-        "name": "product6",
+        "img": "https://placeimg.com/640/480/animals",
+        "name": "Petty Pam",
         "price": "600",
-        "sku": "34ef7g78",
+        "sku": "g3g3g34g3",
         "category": "Electronics",
         "inventory": 56
     }
