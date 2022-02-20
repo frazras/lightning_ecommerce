@@ -1,10 +1,9 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 import classes from "./ProductCard.module.scss";
 import {useCart, Product} from '../Context'
 
 const ProductCard = (props: any) => {
-  const { cart, setCart, addToCart } = useCart();
+  const { cart, addToCart } = useCart();
   function add(product:Product) {
     addToCart(product, cart)
     console.log('You added '+ product.name + ' to the cart.');

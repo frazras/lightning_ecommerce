@@ -57,18 +57,13 @@ const Header = () => {
                 >
                     <ul>
                         <li>
-                            <Link to="/page-one" onClick={menuToggleHandler}>
-                                PageOne
-                            </Link>
-                        </li>
-                        <li>
                             <Link to="/page-two" onClick={menuToggleHandler}>
-                                PageTwo
+                                About Us
                             </Link>
                         </li>
                         <li>
                             <Link to="/page-three" onClick={menuToggleHandler}>
-                                PageThree
+                                Contact Us
                             </Link>
                         </li>
                     </ul>

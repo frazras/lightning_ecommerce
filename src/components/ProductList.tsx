@@ -1,4 +1,4 @@
-import React, {FC, useEffect} from 'react';
+import React, {FC} from 'react';
 import ProductCard from './ProductCard';
 import classes from "./ProductList.module.scss";
 import { Product, useProducts } from '../Context';
