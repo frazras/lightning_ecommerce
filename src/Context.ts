@@ -6,14 +6,16 @@ export interface CartContextType {
   // set the type of state to be handled with context
   cart: Cart,
   setCart: (cart: Cart) => void,
-  addToCart: (product: Product, cart: Cart) => void
+  addToCart: (product: Product, cart: Cart) => void,
+  removeFromCart: (product: Product, cart: Cart) => void
 }
 
 export const CartContext = createContext<CartContextType>(
   {
     cart: [] as Cart, 
     setCart:(cart: Cart) => {return null;}, 
-    addToCart:(x:Product,y:Cart)=>{return null;}
+    addToCart:(x:Product,y:Cart)=>{return null;},
+    removeFromCart:(x:Product,y:Cart)=>{return null;}
   }
 );
 export const useCart = () => useContext(CartContext);

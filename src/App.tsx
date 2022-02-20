@@ -27,7 +27,24 @@ function App() {
         }
         setCart(newcart as SetStateAction<Cart>);
     }
-
+    const removeFromCart = (product:Product, cart:Cart) => {
+        const newcart = cart.slice();
+        let remove = 0;
+        for (let i = 0; i < newcart.length; i++) {
+            const li = newcart[i];
+            if(li[0] === product) {
+                li[1]--;
+                if (li[1] < 1) { 
+                    remove = i+1; 
+                    break;
+                }
+            }
+        }
+        if(remove){
+            newcart.splice(remove-1, 1)
+        }
+        setCart(newcart as SetStateAction<Cart>);
+    }
     const [products, setProducts] = React.useState([] as Products     );
 
     const getProducts=()=>{
@@ -52,7 +69,7 @@ function App() {
   
     return (
         <ProductsContext.Provider value={{products, setProducts, getProducts}}>
-            <CartContext.Provider value={{cart, setCart, addToCart}}>
+            <CartContext.Provider value={{cart, setCart, addToCart, removeFromCart}}>
                 <Layout>
                     <Routes>
                         <Route path="/" element={<Home />} />

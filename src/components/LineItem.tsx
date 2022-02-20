@@ -1,25 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classes from './LineItem.module.scss';
-import {useProducts, useCart, Product} from '../Context'
+import {useCart, Product} from '../Context'
 
 const LineItem = (props: any) => {
-    const { cart, setCart, addToCart } = useCart();
-    const { products } = useProducts();
+    const { cart, addToCart, removeFromCart } = useCart();
     function add(product:Product) {
         addToCart(product, cart)
         console.log('You added '+ product.name + ' to the cart.');
     }
     function remove(product:Product) {
-        addToCart(product, cart)
-        console.log('You added '+ product.name + ' to the cart.');
+        removeFromCart(product, cart)
+        console.log('You removed '+ product.name + ' from the cart.');
     }
     const prod:Product = props.lineItem[0];
     const qnty:number = props.lineItem[1];
     return (
         <div className={classes.CartItems}>
             <div className={classes.imagebox}>
-                <img alt="apple" src={prod.img}/>
+                <img alt={prod.name} src={prod.img}/>
             </div>
             <div className={classes.about}>
                 <h2 className={classes.title}>{prod.name}</h2>
@@ -31,8 +30,7 @@ const LineItem = (props: any) => {
                 <div className={classes.btn} onClick={(e) => remove(prod)}>-</div>
             </div>
             <div className={classes.prices}>
-                <div className={classes.amount}>{prod.price}sats</div>
-                <div className={classes.remove}><u>Remove</u></div>
+                <div className={classes.amount}>{prod.price} Sats</div>
             </div>
         </div>
     )
