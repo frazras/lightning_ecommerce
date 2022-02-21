@@ -4,7 +4,7 @@ import App from './App';
 import { BrowserRouter as Router } from "react-router-dom";
 
 ReactDOM.render(
-    <Router>
+    <Router basename={'/lightning_ecommerce'}>
         <App />
     </Router>,
     document.getElementById("root")
