@@ -1,0 +1,50 @@
+[
+    {
+        "img": "https://placeimg.com/640/480/animals?x=65456766",
+        "name": "Pet of all pets",
+        "price": "50",
+        "sku": "34ef7g78",
+        "category": "Electronics",
+        "inventory": 56
+    },
+    {
+        "img": "https://placeimg.com/640/480/animals?x=7577",
+        "name": "For Animal Lovers",
+        "price": "30",
+        "sku": "5trktergr",
+        "category": "Electronics",
+        "inventory": 56
+    },
+   {
+        "img": "https://placeimg.com/640/480/animals?x=4569867",
+        "name": "Best Friend",
+        "price": "60",
+        "sku": "44ttrty4564he",
+        "category": "Electronics",
+        "inventory": 56
+    },
+    {
+        "img": "https://placeimg.com/640/480/animals?x=123",
+        "name": "Fanimal",
+        "price": "40",
+        "sku": "6jrth45",
+        "category": "Electronics",
+        "inventory": 56
+    },
+    {
+        "img": "https://placeimg.com/640/480/animals?x=434",
+        "name": "Feed Me",
+        "price": "20",
+        "sku": "gh35yh4h",
+        "category": "Electronics",
+        "inventory": 56
+    },
+    {
+        "img": "https://placeimg.com/640/480/animals?x=456",
+        "name": "Petty Pam",
+        "price": "10",
+        "sku": "g3g3g34g3",
+        "category": "Electronics",
+        "inventory": 56
+    }
+]

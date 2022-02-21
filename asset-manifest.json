@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/lightning_ecommerce/static/css/main.fc8d99ac.css",
+    "main.js": "/lightning_ecommerce/static/js/main.19acb5c4.js",
+    "index.html": "/lightning_ecommerce/index.html",
+    "main.fc8d99ac.css.map": "/lightning_ecommerce/static/css/main.fc8d99ac.css.map",
+    "main.19acb5c4.js.map": "/lightning_ecommerce/static/js/main.19acb5c4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc8d99ac.css",
+    "static/js/main.19acb5c4.js"
+  ]
+}
