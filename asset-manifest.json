@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/lightning_ecommerce/static/css/main.fc8d99ac.css",
-    "main.js": "/lightning_ecommerce/static/js/main.7ff3c3de.js",
+    "main.js": "/lightning_ecommerce/static/js/main.98cd9ba9.js",
     "index.html": "/lightning_ecommerce/index.html",
     "main.fc8d99ac.css.map": "/lightning_ecommerce/static/css/main.fc8d99ac.css.map",
-    "main.7ff3c3de.js.map": "/lightning_ecommerce/static/js/main.7ff3c3de.js.map"
+    "main.98cd9ba9.js.map": "/lightning_ecommerce/static/js/main.98cd9ba9.js.map"
   },
   "entrypoints": [
     "static/css/main.fc8d99ac.css",
-    "static/js/main.7ff3c3de.js"
+    "static/js/main.98cd9ba9.js"
   ]
 }
